@@ -1,4 +1,4 @@
-name: AG5-V20-5-BALANCED (CODE final_v20_5_balanced.py) Pine V20.3
+name: AG5-V20-6-GOLDILOCKS (CODE final_v20_6_goldilocks.py)
 on: [push]
 jobs:
   backtest:
@@ -10,11 +10,10 @@ jobs:
           python-version: '3.10'
       - name: Install deps
         run: pip install yfinance pandas
-      - name: Run CODE final_v20_5_balanced.py
-        run: python final_v20_5_balanced.py
-      - name: Results CODE final_v20_5_balanced.py
+      - name: Run CODE final_v20_6_goldilocks.py
+        run: python final_v20_6_goldilocks.py
+      - name: Results CODE final_v20_6_goldilocks.py
         run: |
-          echo "CODE USED = final_v20_5_balanced.py"
-          echo "FILE = final_v20_5_balanced.py"
-          echo "PINE PARAMS = (70,25,25,20,15,15,1,2,1.5,4,64,0.2,0.5,0.1,32)"
+          echo "CODE USED = final_v20_6_goldilocks.py"
+          echo "FILE = final_v20_6_goldilocks.py"
           cat RESULTS_AG5.md
