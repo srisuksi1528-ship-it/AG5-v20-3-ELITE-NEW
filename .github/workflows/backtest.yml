@@ -1,0 +1,18 @@
+name: AG5-V20-3-ELITE-NEW (CODE final_v20_3_elite_clean.py)
+on: [push]
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install
+        run: pip install yfinance pandas
+      - name: Run CODE final_v20_3_elite_clean.py
+        run: python final_v20_3_elite_clean.py
+      - name: Results CODE final_v20_3_elite_clean.py
+        run: |
+          echo "CODE USED = final_v20_3_elite_clean.py"
+          cat RESULTS_AG5.md
