@@ -1,4 +1,4 @@
-name: AG5-V20-6-GOLDILOCKS (CODE final_v20_6_goldilocks.py)
+name: AG5-V20-4-CHAMPION (CODE final_v20_4_elite_filtered.py)
 on: [push]
 jobs:
   backtest:
@@ -10,10 +10,11 @@ jobs:
           python-version: '3.10'
       - name: Install deps
         run: pip install yfinance pandas
-      - name: Run CODE final_v20_6_goldilocks.py
-        run: python final_v20_6_goldilocks.py
-      - name: Results CODE final_v20_6_goldilocks.py
+      - name: Run CODE final_v20_4_elite_filtered.py
+        run: python final_v20_4_elite_filtered.py
+      - name: Results CODE final_v20_4_elite_filtered.py
         run: |
-          echo "CODE USED = final_v20_6_goldilocks.py"
-          echo "FILE = final_v20_6_goldilocks.py"
+          echo "CODE USED = final_v20_4_elite_filtered.py"
+          echo "FILE = final_v20_4_elite_filtered.py"
+          echo "CHAMPION PF 3.22"
           cat RESULTS_AG5.md
